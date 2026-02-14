@@ -1,0 +1,87 @@
+body{
+margin:0;
+height:100vh;
+background:linear-gradient(135deg,#ff4e50,#ff9a9e,#ffd1dc);
+background-size:400% 400%;
+animation:bgMove 12s infinite alternate;
+font-family:Poppins;
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
+color:white;
+overflow:hidden;
+}
+
+@keyframes bgMove{
+0%{background-position:0% 50%;}
+100%{background-position:100% 50%;}
+}
+
+.container{z-index:2;max-width:650px;}
+
+h1{font-family:'Great Vibes';font-size:70px;}
+
+.message{font-size:20px;margin:15px;}
+
+button{
+margin:6px;
+background:white;
+color:#ff4e50;
+border:none;
+padding:12px 26px;
+font-size:17px;
+border-radius:30px;
+cursor:pointer;
+}
+
+button:hover{background:#ff4e50;color:white;}
+
+.letter{
+display:none;
+margin-top:20px;
+background:rgba(255,255,255,0.15);
+padding:20px;
+border-radius:15px;
+backdrop-filter:blur(10px);
+}
+
+.countdown{font-size:22px;margin:10px;}
+
+/* Hearts */
+
+.heart{
+position:fixed;
+bottom:-20px;
+animation:floatUp linear forwards;
+pointer-events:none;
+}
+
+@keyframes floatUp{
+0%{transform:translateY(0);opacity:1;}
+100%{transform:translateY(-110vh);opacity:0;}
+}
+
+/* Roses rain */
+
+.rose{
+position:fixed;
+top:-20px;
+font-size:18px;
+animation:fall linear forwards;
+pointer-events:none;
+}
+
+@keyframes fall{
+0%{transform:translateY(0);}
+100%{transform:translateY(110vh);}
+}
+
+.cursor-heart{
+position:fixed;
+pointer-events:none;
+transform:translate(-50%,-50%);
+}
+
+.fade{opacity:0;animation:fadeIn 2s forwards;}
+@keyframes fadeIn{to{opacity:1;}}
